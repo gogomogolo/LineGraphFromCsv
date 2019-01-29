@@ -19,8 +19,9 @@ def add_line_to_plot(plot, line):
     y_axis_identifier = getattr(line, 'y_id')
     data_frame = getattr(line, 'data_frame')
     color = getattr(line, 'color')
+    marker = getattr(line, 'marker')
     width = getattr(line, 'width')
-    plot.plot(x_axis_identifier, y_axis_identifier, data=data_frame, color=color, linewidth=width)
+    plot.plot(x_axis_identifier, y_axis_identifier, data=data_frame, color=color, marker=marker, linewidth=width)
 
 
 def show_plot(plot):
