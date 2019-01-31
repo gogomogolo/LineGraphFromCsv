@@ -20,14 +20,14 @@ args = parser.parse_args()
 
 
 def main():
-    file = print(args.file)
-    x_field = print(args.x_field)
-    y_field = print(args.y_field)
-    line_color = print(args.line_color)
-    output_dir = print(args.output_dir)
-    label_x = print(args.label_x)
-    label_y = print(args.label_y)
-    title = print(args.title)
+    file = args.file
+    x_field = args.x_field
+    y_field = args.y_field
+    line_color = args.line_color
+    output_dir = args.output_dir
+    label_x = args.label_x
+    label_y = args.label_y
+    title = args.title
 
     files = file.split(',')
     colors = line_color.split(',')
@@ -50,7 +50,6 @@ def main():
     data_frame_logic = PointToDataFrame()
     line_plot = LinePlot(title, label_x, label_y, data_frame_logic)
     line_plot.save(output_dir, y_to_objects, y_to_color)
-
 
 
 main()

@@ -10,4 +10,4 @@ class PointToDataFrame(object):
             x_values.append(getattr(point, 'x'))
             y_values.append(getattr(point, 'y'))
 
-        return pd.DataFrame({'x': x_values, 'y': y_values})
+        return pd.DataFrame({'x_id': x_values, 'y_id': y_values})

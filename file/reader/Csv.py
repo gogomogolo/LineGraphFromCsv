@@ -9,5 +9,7 @@ class Csv(object):
     def read(self):
         if len(self.output) == 0:
             with open(self.path, 'r') as file:
-                self.output = csv.reader(file, delimeter=',')
+                content = csv.reader(file, delimiter=',')
+                for row in content:
+                    self.output.append(row)
         return self.output

@@ -14,8 +14,8 @@ class LinePlot(object):
 
         for ylabel_id in y_to_objects_map:
             data_frame = self.dataframe_logic.convert(y_to_objects_map[ylabel_id])
-            line = Line(self.xlabel, self.ylabel, data_frame,
-                        y_to_color_map[ylabel_id], 'o', 2)
+            line = Line(x_id='x_id', y_id='y_id', data_frame=data_frame,
+                        color=y_to_color_map[ylabel_id], marker='o', width=2)
             GraphUtil.add_line_to_plot(plot, line)
 
         GraphUtil.write_plot_to_file(plot, draw_path)
